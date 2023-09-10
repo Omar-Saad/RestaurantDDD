@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RestaurantDDD.Contracts/1.0.0": {
+        "runtime": {
+          "RestaurantDDD.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RestaurantDDD.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

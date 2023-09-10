@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "m2GvuQ9Y/N8apqp2TZkVr1iMVGksQD327ja0aO41SYxt/0RtXO0nZMl1Nol21ZfejhJp8c1M/QXKBoPo/mHyYw==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\asp_net\\DDD Project\\RestaurantDDD.Domain\\RestaurantDDD.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\osmousa\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
