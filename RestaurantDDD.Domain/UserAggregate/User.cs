@@ -1,7 +1,7 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
-using RestaurantDDD.Domain.User.ValueObjects;
+using RestaurantDDD.Domain.UserAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.User
+namespace RestaurantDDD.Domain.UserAggregate
 {
     public sealed class User : AggregateRoot<UserId>
     {
@@ -11,7 +11,7 @@ namespace RestaurantDDD.Domain.User
         public string Password { get; private set; }
         public DateTime CreatedDateTime { get; private set; }
         public DateTime UpdatedDateTime { get; private set; }
-
+        private User() { }
         private User(
             UserId id,
             string firstName,
@@ -29,7 +29,7 @@ namespace RestaurantDDD.Domain.User
             UpdatedDateTime = updatedDateTime;
         }
 
-        public User Craete(string firstName,
+        public static User Craete(string firstName,
             string lastName,
             string email,
             string password) => new(UserId.CreateUnique(),

@@ -1,12 +1,13 @@
 ﻿using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace RestaurantDDD.API.Controllers
 {
-    [Route("api/")]
     [ApiController]
+    [Authorize]
     public class ApiController : ControllerBase
     {
         [NonAction]

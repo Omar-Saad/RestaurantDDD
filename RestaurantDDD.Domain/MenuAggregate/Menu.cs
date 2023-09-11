@@ -1,10 +1,12 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Dinner;
-using RestaurantDDD.Domain.Menu.Entities;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.HostAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuAggregate.Entities;
+using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuReviewAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.Menu
+namespace RestaurantDDD.Domain.MenuAggregate
 {
     public sealed class Menu : AggregateRoot<MenuId>
     {
@@ -21,12 +23,12 @@ namespace RestaurantDDD.Domain.Menu
         public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
         public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
 
-        void AddDinner(Dinner.Dinner dinner)
+        void AddDinner(DinnerAggregate.Dinner dinner)
         {
             // Todo Validation
             _dinnerIds.Add(dinner.Id);
         }
-        void RemoveDinner(Dinner.Dinner dinner)
+        void RemoveDinner(DinnerAggregate.Dinner dinner)
         {
             // TODO
             _dinnerIds.Remove(dinner.Id);
@@ -35,13 +37,14 @@ namespace RestaurantDDD.Domain.Menu
         {
             // TODO
         }
-
+        private Menu() { }
 
         private Menu(MenuId id,
                     string name,
                     string description,
                     AverageRating averageRating,
                     HostId hostId,
+                    List<MenuSection> sections,
                     DateTime createdDateTime,
                     DateTime updatedDateTime) : base(id)
         {
@@ -49,25 +52,27 @@ namespace RestaurantDDD.Domain.Menu
             Description = description;
             AverageRating = averageRating;
             HostId = hostId;
+            _sections = sections;
             CreatedTime = createdDateTime;
             UpdatedTime = updatedDateTime;
         }
 
-     
 
-        
 
-     
-        public Menu Create(string name,
+
+
+
+        public static Menu Create(string name,
                     string description,
-                    AverageRating averageRating,
-                    HostId hostId
+                    HostId hostId,
+                    List<MenuSection> sections
                     ) => new(
                         MenuId.CreateUnique(),
                         name,
                         description,
-                        averageRating,
+                        AverageRating.CreateNew(),
                         hostId,
+                        sections,
                         DateTime.UtcNow,
                         DateTime.UtcNow);
 

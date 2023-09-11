@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Dinner.Enums
+namespace RestaurantDDD.Domain.DinnerAggregate.Enums
 {
     public enum ReservationStatus
     {

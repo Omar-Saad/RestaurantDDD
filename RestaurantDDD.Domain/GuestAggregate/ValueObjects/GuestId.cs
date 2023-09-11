@@ -1,6 +1,6 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 
-namespace RestaurantDDD.Domain.Guest.ValueObjects
+namespace RestaurantDDD.Domain.GuestAggregate.ValueObjects
 {
     public sealed class GuestId : ValueObject
     {
@@ -10,7 +10,7 @@ namespace RestaurantDDD.Domain.Guest.ValueObjects
             Value = value;
         }
 
-        protected static GuestId CreateUnique() => new GuestId(Guid.NewGuid());
+        public static GuestId CreateUnique() => new GuestId(Guid.NewGuid());
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

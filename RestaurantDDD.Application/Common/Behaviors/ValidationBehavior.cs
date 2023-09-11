@@ -1,9 +1,6 @@
 ﻿using ErrorOr;
 using FluentValidation;
 using MediatR;
-using RestaurantDDD.Application.Authentication.Commands;
-using RestaurantDDD.Application.Authentication.Common;
-using System.Reflection.Metadata;
 
 namespace RestaurantDDD.Application.Common.Behaviors
 {

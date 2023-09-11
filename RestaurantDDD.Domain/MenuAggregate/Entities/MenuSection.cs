@@ -1,12 +1,12 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Menu.Entities
+namespace RestaurantDDD.Domain.MenuAggregate.Entities
 {
     public class MenuSection : Entity<MenuSectionId>
     {
@@ -16,16 +16,18 @@ namespace RestaurantDDD.Domain.Menu.Entities
         public string Description { get; private set; }
 
         public IReadOnlyList<MenuItem> Items => _items.AsReadOnly();
-
-        private MenuSection(MenuSectionId id, string name, string description):base(id) 
+        protected MenuSection() { }
+        private MenuSection(MenuSectionId id, string name, string description, List<MenuItem> items) : base(id)
         {
             Name = name;
             Description = description;
+            _items = items;
         }
 
         public static MenuSection Create(
           string name,
-          string description
-          ) => new(MenuSectionId.CreateUnique(), name, description);
+          string description,
+          List<MenuItem> items
+          ) => new(MenuSectionId.CreateUnique(), name, description, items);
     }
 }

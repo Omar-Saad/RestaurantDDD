@@ -1,10 +1,10 @@
-﻿using RestaurantDDD.Domain.Bill.ValueObjects;
+﻿using RestaurantDDD.Domain.BillAggregate.ValueObjects;
 using RestaurantDDD.Domain.Common.Models;
-using RestaurantDDD.Domain.Dinner.Enums;
-using RestaurantDDD.Domain.Guest.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.Enums;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.GuestAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.Dinner.Entities
+namespace RestaurantDDD.Domain.DinnerAggregate.Entities
 {
     public sealed class Reservation : Entity<ReservationId>
     {
@@ -16,7 +16,7 @@ namespace RestaurantDDD.Domain.Dinner.Entities
         public DateTime ArrivalDateTime { get; private set; }
         public DateTime UpdatedDateTime { get; private set; }
 
-
+        private Reservation() { }
         private Reservation(
             ReservationId id,
             int guestCount,

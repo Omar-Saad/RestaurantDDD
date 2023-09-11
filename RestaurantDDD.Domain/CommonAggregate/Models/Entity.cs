@@ -14,6 +14,7 @@ namespace RestaurantDDD.Domain.Common.Models
         {
             Id = id;
         }
+        protected Entity() { }
 
         public override bool Equals(object? obj)
         {

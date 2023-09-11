@@ -9,3 +9,14 @@ D:\Projects\asp_net\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contr
 D:\Projects\asp_net\RestaurantDDD.Contracts\obj\Debug\net6.0\refint\RestaurantDDD.Contracts.dll
 D:\Projects\asp_net\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.pdb
 D:\Projects\asp_net\RestaurantDDD.Contracts\obj\Debug\net6.0\ref\RestaurantDDD.Contracts.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.AssemblyInfoInputs.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.AssemblyInfo.cs
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.csproj.CoreCompileInputs.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\refint\RestaurantDDD.Contracts.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\RestaurantDDD.Contracts.pdb
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\bin\Debug\net6.0\RestaurantDDD.Contracts.deps.json
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\bin\Debug\net6.0\RestaurantDDD.Contracts.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\bin\Debug\net6.0\RestaurantDDD.Contracts.pdb
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Contracts\obj\Debug\net6.0\ref\RestaurantDDD.Contracts.dll

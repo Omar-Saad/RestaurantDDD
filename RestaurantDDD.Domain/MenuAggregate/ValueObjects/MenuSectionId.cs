@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Menu.ValueObjects
+namespace RestaurantDDD.Domain.MenuAggregate.ValueObjects
 {
     public sealed class MenuSectionId : ValueObject
     {
@@ -20,5 +20,8 @@ namespace RestaurantDDD.Domain.Menu.ValueObjects
         {
             yield return Value;
         }
+
+        public static MenuSectionId Create(Guid value)
+       => new MenuSectionId(value);
     }
 }

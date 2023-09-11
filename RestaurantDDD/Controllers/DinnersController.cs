@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace RestaurantDDD.API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
     [Authorize]
     public class DinnersController : ApiController
     {

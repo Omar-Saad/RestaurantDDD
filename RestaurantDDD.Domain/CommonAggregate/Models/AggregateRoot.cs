@@ -11,5 +11,9 @@ namespace RestaurantDDD.Domain.Common.Models
         protected AggregateRoot(TId id) : base(id)
         {
         }
+
+        protected AggregateRoot()
+        {
+        }
     }
 }

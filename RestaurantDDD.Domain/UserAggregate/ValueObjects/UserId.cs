@@ -1,12 +1,6 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
-using RestaurantDDD.Domain.Menu.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.User.ValueObjects
+namespace RestaurantDDD.Domain.UserAggregate.ValueObjects
 {
     public sealed class UserId : ValueObject
     {

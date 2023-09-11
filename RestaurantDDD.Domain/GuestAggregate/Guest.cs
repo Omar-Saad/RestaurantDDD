@@ -1,17 +1,13 @@
-﻿using RestaurantDDD.Domain.Bill.ValueObjects;
+﻿using RestaurantDDD.Domain.BillAggregate.ValueObjects;
 using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Guest.Entities;
-using RestaurantDDD.Domain.Guest.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
-using RestaurantDDD.Domain.User.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.GuestAggregate.Entities;
+using RestaurantDDD.Domain.GuestAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuReviewAggregate.ValueObjects;
+using RestaurantDDD.Domain.UserAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.Guest
+namespace RestaurantDDD.Domain.GuestAggregate
 {
     public sealed class Guest : AggregateRoot<GuestId>
     {
@@ -33,8 +29,38 @@ namespace RestaurantDDD.Domain.Guest
         public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
         public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
         public IReadOnlyList<GuestRating> RatingIds => _ratingIds.AsReadOnly();
-        
 
- 
+        private Guest() { }
+        public Guest(
+            GuestId id,
+            string firstName,
+                     string lastName,
+                     string profileImage,
+                     AverageRating averageRating,
+                     UserId userId,
+                     DateTime createdDateTime,
+                     DateTime updatedDateTime) : base(id)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            ProfileImage = profileImage;
+            AverageRating = averageRating;
+            UserId = userId;
+            CreatedDateTime = createdDateTime;
+            UpdatedDateTime = updatedDateTime;
+        }
+
+        public Guest Create(string firstName,
+                     string lastName,
+                     string profileImage,
+                     AverageRating averageRating,
+                     UserId userId) => new(GuestId.CreateUnique(),
+                                           firstName,
+                                           lastName,
+                                           profileImage,
+                                           averageRating,
+                                           userId,
+                                           DateTime.UtcNow,
+                                           DateTime.UtcNow);
     }
 }

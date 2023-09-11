@@ -6,10 +6,12 @@ using RestaurantDDD.Application.Authentication.Commands;
 using RestaurantDDD.Application.Authentication.Common;
 using RestaurantDDD.Application.Authentication.Queries;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestaurantDDD.API.Controllers
 {
-    [Route("auth")]
+    [Route("api/auth")]
+    [AllowAnonymous]
     //[ApiController]
     public class AuthenticationController : ApiController
     {

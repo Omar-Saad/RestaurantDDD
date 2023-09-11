@@ -1,9 +1,12 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Guest.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.GuestAggregate.ValueObjects;
+using RestaurantDDD.Domain.HostAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuReviewAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.Dinner
+namespace RestaurantDDD.Domain.MenuReviewAggregate
 {
     public sealed class MenuReview : AggregateRoot<MenuReviewId>
     {
@@ -15,7 +18,7 @@ namespace RestaurantDDD.Domain.Dinner
         public DinnerId DinnerId { get; private set; }
         public DateTime CreatedDateTime { get; private set; }
         public DateTime UpdatedDateTime { get; private set; }
-
+        private MenuReview() { }
         private MenuReview(
             MenuReviewId id,
             Rating rating,

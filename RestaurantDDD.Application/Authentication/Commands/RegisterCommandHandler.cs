@@ -4,7 +4,7 @@ using RestaurantDDD.Application.Authentication.Common;
 using RestaurantDDD.Application.Common.Interfaces.Authentication;
 using RestaurantDDD.Application.Common.Interfaces.Persistence;
 using RestaurantDDD.Domain.Common.Errors;
-using RestaurantDDD.Domain.Entities;
+using RestaurantDDD.Domain.UserAggregate;
 
 namespace RestaurantDDD.Application.Authentication.Commands
 {
@@ -32,13 +32,13 @@ namespace RestaurantDDD.Application.Authentication.Commands
             }
 
             // Create a new User
-            var newUser = new User
-            {
-                Email = request.Email,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                Password = request.Password
-            };
+            User newUser =  User.Craete
+            (
+                email : request.Email,
+                firstName : request.FirstName,
+                lastName: request.LastName,
+                password: request.Password
+            );
             _userRepository.Add(newUser);
             // Create JWT
             string token = _jwtTokGenerator.GenerateToken(newUser);

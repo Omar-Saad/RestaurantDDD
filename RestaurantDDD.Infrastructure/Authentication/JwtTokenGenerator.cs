@@ -1,14 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RestaurantDDD.Application.Common.Interfaces.Authentication;
-using RestaurantDDD.Domain.Entities;
-using System;
-using System.Collections.Generic;
+using RestaurantDDD.Domain.UserAggregate;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RestaurantDDD.Infrastructure.Authentication
 {

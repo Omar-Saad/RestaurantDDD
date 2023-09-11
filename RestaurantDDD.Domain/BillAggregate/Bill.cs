@@ -1,15 +1,16 @@
-﻿using RestaurantDDD.Domain.Bill.ValueObjects;
+﻿using RestaurantDDD.Domain.BillAggregate.ValueObjects;
 using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Guest.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.GuestAggregate.ValueObjects;
+using RestaurantDDD.Domain.HostAggregate.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Bill
+namespace RestaurantDDD.Domain.BillAggregate
 {
     public sealed class Bill : AggregateRoot<BillId>
     {
@@ -36,6 +37,9 @@ namespace RestaurantDDD.Domain.Bill
             CreatedDateTime = createdDateTime;
             UpdatedDateTime = updatedDateTime;
         }
+
+        private Bill() { }
+
         public Bill Create(DinnerId dinnerId,
             GuestId guestId,
             HostId hostId,
@@ -49,4 +53,4 @@ namespace RestaurantDDD.Domain.Bill
     }
 
 
-    }
+}

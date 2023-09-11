@@ -1,9 +1,11 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
-using RestaurantDDD.Domain.User.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.HostAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
+using RestaurantDDD.Domain.UserAggregate.ValueObjects;
 
-namespace RestaurantDDD.Domain.Host
+namespace RestaurantDDD.Domain.HostAggregate
 {
     public sealed class Host : AggregateRoot<HostId>
     {
@@ -24,6 +26,7 @@ namespace RestaurantDDD.Domain.Host
 
         public IReadOnlyList<MenuId> MenuIds => _menuIds.AsReadOnly();
         public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+        private Host() { }
         private Host(
             HostId id,
             string firstName,

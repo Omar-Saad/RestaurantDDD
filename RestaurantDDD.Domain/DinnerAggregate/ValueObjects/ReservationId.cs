@@ -1,6 +1,6 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 
-namespace RestaurantDDD.Domain.Menu.ValueObjects
+namespace RestaurantDDD.Domain.DinnerAggregate.ValueObjects
 {
     public sealed class ReservationId : ValueObject
     {

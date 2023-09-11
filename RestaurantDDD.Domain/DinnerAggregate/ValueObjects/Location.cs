@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Dinner.ValueObjects
+namespace RestaurantDDD.Domain.DinnerAggregate.ValueObjects
 {
     public sealed class Location : ValueObject
     {

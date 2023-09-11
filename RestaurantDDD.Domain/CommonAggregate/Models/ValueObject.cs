@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RestaurantDDD.Domain.Common.Models
-{`
+{
     public abstract class ValueObject
     {
         protected abstract IEnumerable<object> GetEqualityComponents();

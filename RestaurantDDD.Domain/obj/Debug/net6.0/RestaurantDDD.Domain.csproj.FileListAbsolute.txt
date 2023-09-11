@@ -10,3 +10,15 @@ D:\Projects\asp_net\RestaurantDDD.Domain\obj\Debug\net6.0\refint\RestaurantDDD.D
 D:\Projects\asp_net\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.pdb
 D:\Projects\asp_net\RestaurantDDD.Domain\obj\Debug\net6.0\ref\RestaurantDDD.Domain.dll
 D:\Projects\asp_net\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.csproj.AssemblyReference.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.csproj.AssemblyReference.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.AssemblyInfoInputs.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.AssemblyInfo.cs
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\refint\RestaurantDDD.Domain.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\RestaurantDDD.Domain.pdb
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\bin\Debug\net6.0\RestaurantDDD.Domain.deps.json
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\bin\Debug\net6.0\RestaurantDDD.Domain.dll
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\bin\Debug\net6.0\RestaurantDDD.Domain.pdb
+D:\Projects\asp_net\DDD Project\RestaurantDDD.Domain\obj\Debug\net6.0\ref\RestaurantDDD.Domain.dll

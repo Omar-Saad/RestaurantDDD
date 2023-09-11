@@ -1,16 +1,17 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 using RestaurantDDD.Domain.Common.ValueObjects;
-using RestaurantDDD.Domain.Dinner.Entities;
-using RestaurantDDD.Domain.Dinner.Enums;
-using RestaurantDDD.Domain.Dinner.ValueObjects;
-using RestaurantDDD.Domain.Menu.ValueObjects;
+using RestaurantDDD.Domain.DinnerAggregate.Entities;
+using RestaurantDDD.Domain.DinnerAggregate.Enums;
+using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
+using RestaurantDDD.Domain.HostAggregate.ValueObjects;
+using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDDD.Domain.Dinner
+namespace RestaurantDDD.Domain.DinnerAggregate
 {
     public sealed class Dinner : AggregateRoot<DinnerId>
     {
@@ -33,6 +34,7 @@ namespace RestaurantDDD.Domain.Dinner
 
         public IReadOnlyList<Reservation> Reservations => _reservations.AsReadOnly();
 
+        private Dinner() { }
         public Dinner(
             DinnerId id,
             string name,

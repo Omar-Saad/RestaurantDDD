@@ -1,6 +1,6 @@
 ﻿using RestaurantDDD.Domain.Common.Models;
 
-namespace RestaurantDDD.Domain.Bill.ValueObjects
+namespace RestaurantDDD.Domain.BillAggregate.ValueObjects
 {
     public sealed class BillId : ValueObject
     {
