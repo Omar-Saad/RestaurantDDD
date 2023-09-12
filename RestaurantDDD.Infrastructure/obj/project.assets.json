@@ -1743,7 +1743,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ErrorOr": "1.2.1"
+          "ErrorOr": "1.2.1",
+          "MediatR": "12.1.1"
         },
         "compile": {
           "bin/placeholder/RestaurantDDD.Domain.dll": {}

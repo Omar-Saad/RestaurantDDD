@@ -9,6 +9,7 @@ using RestaurantDDD.Application.Common.Interfaces.Persistence;
 using RestaurantDDD.Application.Common.Interfaces.Repositories;
 using RestaurantDDD.Infrastructure.Authentication;
 using RestaurantDDD.Infrastructure.Persistence;
+using RestaurantDDD.Infrastructure.Persistence.Interceptors;
 using RestaurantDDD.Infrastructure.Persistence.Repositories;
 using System.Text;
 
@@ -28,6 +29,7 @@ namespace RestaurantDDD.Infrastructure
         }
         public static IServiceCollection AddPersistence(this IServiceCollection services, ConfigurationManager configuration)
         {
+            services.AddScoped<PublishDomainEventsInterceptor>();
             services.AddDbContext<RestaurantDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
                 );

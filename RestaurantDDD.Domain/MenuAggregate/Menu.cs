@@ -3,6 +3,7 @@ using RestaurantDDD.Domain.Common.ValueObjects;
 using RestaurantDDD.Domain.DinnerAggregate.ValueObjects;
 using RestaurantDDD.Domain.HostAggregate.ValueObjects;
 using RestaurantDDD.Domain.MenuAggregate.Entities;
+using RestaurantDDD.Domain.MenuAggregate.Events;
 using RestaurantDDD.Domain.MenuAggregate.ValueObjects;
 using RestaurantDDD.Domain.MenuReviewAggregate.ValueObjects;
 
@@ -66,15 +67,22 @@ namespace RestaurantDDD.Domain.MenuAggregate
                     string description,
                     HostId hostId,
                     List<MenuSection> sections
-                    ) => new(
-                        MenuId.CreateUnique(),
-                        name,
-                        description,
-                        AverageRating.CreateNew(),
-                        hostId,
-                        sections,
-                        DateTime.UtcNow,
-                        DateTime.UtcNow);
+                    )
+        {
+            var menu = new Menu(
+                          MenuId.CreateUnique(),
+                          name,
+                          description,
+                          AverageRating.CreateNew(),
+                          hostId,
+                          sections,
+                          DateTime.UtcNow,
+                          DateTime.UtcNow);
+
+            menu.AddDomainEvent(new MenuCreated(menu));
+            return menu;
+
+        }
 
 
 
